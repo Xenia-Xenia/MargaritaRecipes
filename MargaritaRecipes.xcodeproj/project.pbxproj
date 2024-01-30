@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		1D7239E52B68E88E0060D053 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7239E42B68E88E0060D053 /* AppDelegate.swift */; };
 		1D7239E72B68E88E0060D053 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7239E62B68E88E0060D053 /* SceneDelegate.swift */; };
-		1D7239E92B68E88E0060D053 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7239E82B68E88E0060D053 /* ViewController.swift */; };
+		1D7239E92B68E88E0060D053 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7239E82B68E88E0060D053 /* ListViewController.swift */; };
 		1D7239EC2B68E88E0060D053 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D7239EA2B68E88E0060D053 /* Main.storyboard */; };
 		1D7239EE2B68E88F0060D053 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D7239ED2B68E88F0060D053 /* Assets.xcassets */; };
 		1D7239F12B68E88F0060D053 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D7239EF2B68E88F0060D053 /* LaunchScreen.storyboard */; };
+		1D7239FE2B68E9340060D053 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7239FD2B68E9340060D053 /* Drink.swift */; };
+		1D723A022B690A840060D053 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D723A012B690A840060D053 /* RecipeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1D7239E12B68E88E0060D053 /* CocktailRecipies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailRecipies.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D7239E12B68E88E0060D053 /* MargaritaRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MargaritaRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D7239E42B68E88E0060D053 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D7239E62B68E88E0060D053 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1D7239E82B68E88E0060D053 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1D7239E82B68E88E0060D053 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		1D7239EB2B68E88E0060D053 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1D7239ED2B68E88F0060D053 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D7239F02B68E88F0060D053 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D7239F22B68E88F0060D053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D7239FD2B68E9340060D053 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		1D723A012B690A840060D053 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +44,7 @@
 		1D7239D82B68E88E0060D053 = {
 			isa = PBXGroup;
 			children = (
-				1D7239E32B68E88E0060D053 /* CocktailRecipies */,
+				1D7239E32B68E88E0060D053 /* MargaritaRecipes */,
 				1D7239E22B68E88E0060D053 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,31 +52,73 @@
 		1D7239E22B68E88E0060D053 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D7239E12B68E88E0060D053 /* CocktailRecipies.app */,
+				1D7239E12B68E88E0060D053 /* MargaritaRecipes.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1D7239E32B68E88E0060D053 /* CocktailRecipies */ = {
+		1D7239E32B68E88E0060D053 /* MargaritaRecipes */ = {
+			isa = PBXGroup;
+			children = (
+				1D7239F92B68E8B30060D053 /* ViewControllers */,
+				1D7239FA2B68E8C60060D053 /* Models */,
+				1D7239FB2B68E8DB0060D053 /* Storyboards */,
+				1D7239F82B68E89D0060D053 /* App */,
+				1D7239FC2B68E8E60060D053 /* Resources */,
+			);
+			path = MargaritaRecipes;
+			sourceTree = "<group>";
+		};
+		1D7239F82B68E89D0060D053 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				1D7239E42B68E88E0060D053 /* AppDelegate.swift */,
 				1D7239E62B68E88E0060D053 /* SceneDelegate.swift */,
-				1D7239E82B68E88E0060D053 /* ViewController.swift */,
-				1D7239EA2B68E88E0060D053 /* Main.storyboard */,
-				1D7239ED2B68E88F0060D053 /* Assets.xcassets */,
-				1D7239EF2B68E88F0060D053 /* LaunchScreen.storyboard */,
 				1D7239F22B68E88F0060D053 /* Info.plist */,
 			);
-			path = CocktailRecipies;
+			path = App;
+			sourceTree = "<group>";
+		};
+		1D7239F92B68E8B30060D053 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1D7239E82B68E88E0060D053 /* ListViewController.swift */,
+				1D723A012B690A840060D053 /* RecipeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1D7239FA2B68E8C60060D053 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1D7239FD2B68E9340060D053 /* Drink.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1D7239FB2B68E8DB0060D053 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1D7239EA2B68E88E0060D053 /* Main.storyboard */,
+				1D7239EF2B68E88F0060D053 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		1D7239FC2B68E8E60060D053 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1D7239ED2B68E88F0060D053 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D7239E02B68E88E0060D053 /* CocktailRecipies */ = {
+		1D7239E02B68E88E0060D053 /* MargaritaRecipes */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D7239F52B68E88F0060D053 /* Build configuration list for PBXNativeTarget "CocktailRecipies" */;
+			buildConfigurationList = 1D7239F52B68E88F0060D053 /* Build configuration list for PBXNativeTarget "MargaritaRecipes" */;
 			buildPhases = (
 				1D7239DD2B68E88E0060D053 /* Sources */,
 				1D7239DE2B68E88E0060D053 /* Frameworks */,
@@ -82,9 +128,9 @@
 			);
 			dependencies = (
 			);
-			name = CocktailRecipies;
+			name = MargaritaRecipes;
 			productName = CocktailRecipies;
-			productReference = 1D7239E12B68E88E0060D053 /* CocktailRecipies.app */;
+			productReference = 1D7239E12B68E88E0060D053 /* MargaritaRecipes.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +148,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1D7239DC2B68E88E0060D053 /* Build configuration list for PBXProject "CocktailRecipies" */;
+			buildConfigurationList = 1D7239DC2B68E88E0060D053 /* Build configuration list for PBXProject "MargaritaRecipes" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +161,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D7239E02B68E88E0060D053 /* CocktailRecipies */,
+				1D7239E02B68E88E0060D053 /* MargaritaRecipes */,
 			);
 		};
 /* End PBXProject section */
@@ -138,9 +184,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D7239E92B68E88E0060D053 /* ViewController.swift in Sources */,
+				1D723A022B690A840060D053 /* RecipeViewController.swift in Sources */,
+				1D7239E92B68E88E0060D053 /* ListViewController.swift in Sources */,
 				1D7239E52B68E88E0060D053 /* AppDelegate.swift in Sources */,
 				1D7239E72B68E88E0060D053 /* SceneDelegate.swift in Sources */,
+				1D7239FE2B68E9340060D053 /* Drink.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,22 +342,25 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8P524LWSW9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CocktailRecipies/Info.plist;
+				INFOPLIST_FILE = MargaritaRecipes/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.swiftbook.CocktailRecipies;
+				PRODUCT_BUNDLE_IDENTIFIER = org.swiftbook.MargaritaRecipes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -322,29 +373,32 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8P524LWSW9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CocktailRecipies/Info.plist;
+				INFOPLIST_FILE = MargaritaRecipes/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.swiftbook.CocktailRecipies;
+				PRODUCT_BUNDLE_IDENTIFIER = org.swiftbook.MargaritaRecipes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D7239DC2B68E88E0060D053 /* Build configuration list for PBXProject "CocktailRecipies" */ = {
+		1D7239DC2B68E88E0060D053 /* Build configuration list for PBXProject "MargaritaRecipes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D7239F32B68E88F0060D053 /* Debug */,
@@ -353,7 +407,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1D7239F52B68E88F0060D053 /* Build configuration list for PBXNativeTarget "CocktailRecipies" */ = {
+		1D7239F52B68E88F0060D053 /* Build configuration list for PBXNativeTarget "MargaritaRecipes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D7239F62B68E88F0060D053 /* Debug */,

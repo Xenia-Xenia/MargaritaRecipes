@@ -1,19 +1,17 @@
 //
-//  ViewController.swift
-//  CocktailRecipies
+//  RecipeViewController.swift
+//  MargaritaRecipes
 //
 //  Created by Ксения Загарьева on 30.01.2024.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+final class RecipeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
 
-
 }
-
