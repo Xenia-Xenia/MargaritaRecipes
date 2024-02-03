@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Drink: Decodable {
+struct Drink: Codable {
     let strDrink: String?
     let strAlcoholic: String?
     let strGlass: String?
@@ -32,3 +32,4 @@ struct Drink: Decodable {
 struct Drinks: Decodable {
     let drinks: [Drink]?
 }
+

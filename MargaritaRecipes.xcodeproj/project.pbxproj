@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D691C5D2B6C3DEB00A49B53 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D691C5C2B6C3DEB00A49B53 /* MainViewController.swift */; };
+		1D691C5F2B6C3F2A00A49B53 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D691C5E2B6C3F2A00A49B53 /* Animation.swift */; };
+		1D691C622B6D232F00A49B53 /* DrinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D691C612B6D232F00A49B53 /* DrinkCell.swift */; };
+		1D691C642B6D241500A49B53 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D691C632B6D241500A49B53 /* NetworkManager.swift */; };
 		1D7239E52B68E88E0060D053 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7239E42B68E88E0060D053 /* AppDelegate.swift */; };
 		1D7239E72B68E88E0060D053 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7239E62B68E88E0060D053 /* SceneDelegate.swift */; };
 		1D7239E92B68E88E0060D053 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7239E82B68E88E0060D053 /* ListViewController.swift */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D691C5C2B6C3DEB00A49B53 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1D691C5E2B6C3F2A00A49B53 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		1D691C612B6D232F00A49B53 /* DrinkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkCell.swift; sourceTree = "<group>"; };
+		1D691C632B6D241500A49B53 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		1D7239E12B68E88E0060D053 /* MargaritaRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MargaritaRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D7239E42B68E88E0060D053 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D7239E62B68E88E0060D053 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +49,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D691C602B6C3F2F00A49B53 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D691C5E2B6C3F2A00A49B53 /* Animation.swift */,
+				1D691C612B6D232F00A49B53 /* DrinkCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D691C652B6D249900A49B53 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1D691C632B6D241500A49B53 /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		1D7239D82B68E88E0060D053 = {
 			isa = PBXGroup;
 			children = (
@@ -60,8 +85,10 @@
 		1D7239E32B68E88E0060D053 /* MargaritaRecipes */ = {
 			isa = PBXGroup;
 			children = (
+				1D691C602B6C3F2F00A49B53 /* View */,
 				1D7239F92B68E8B30060D053 /* ViewControllers */,
 				1D7239FA2B68E8C60060D053 /* Models */,
+				1D691C652B6D249900A49B53 /* Services */,
 				1D7239FB2B68E8DB0060D053 /* Storyboards */,
 				1D7239F82B68E89D0060D053 /* App */,
 				1D7239FC2B68E8E60060D053 /* Resources */,
@@ -84,6 +111,7 @@
 			children = (
 				1D7239E82B68E88E0060D053 /* ListViewController.swift */,
 				1D723A012B690A840060D053 /* RecipeViewController.swift */,
+				1D691C5C2B6C3DEB00A49B53 /* MainViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -184,10 +212,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D691C642B6D241500A49B53 /* NetworkManager.swift in Sources */,
 				1D723A022B690A840060D053 /* RecipeViewController.swift in Sources */,
 				1D7239E92B68E88E0060D053 /* ListViewController.swift in Sources */,
+				1D691C5F2B6C3F2A00A49B53 /* Animation.swift in Sources */,
 				1D7239E52B68E88E0060D053 /* AppDelegate.swift in Sources */,
+				1D691C5D2B6C3DEB00A49B53 /* MainViewController.swift in Sources */,
 				1D7239E72B68E88E0060D053 /* SceneDelegate.swift in Sources */,
+				1D691C622B6D232F00A49B53 /* DrinkCell.swift in Sources */,
 				1D7239FE2B68E9340060D053 /* Drink.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
