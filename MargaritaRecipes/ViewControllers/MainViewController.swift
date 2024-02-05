@@ -7,8 +7,6 @@
 
 import UIKit
 
-let url = URL(string: "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")!
-
 class MainViewController: UIViewController {
 
     @IBOutlet var margaritaButton: UIButton!
@@ -19,20 +17,9 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         margaritaButton.doGlowAnimation(withColor: UIColor.white)
-        fetchDrinks()
     }
 }
 
 // MARK: - Networking
 extension MainViewController {
-    private func fetchDrinks() {
-        networkManager.fetch(Drinks.self, from: url) { result in
-            switch result {
-            case .success(let drinks):
-                print(drinks)
-            case .failure(let error):
-                print(error)
-            }
-        }
-    }
 }

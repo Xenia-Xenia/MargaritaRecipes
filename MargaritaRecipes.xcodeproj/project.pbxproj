@@ -19,6 +19,7 @@
 		1D7239F12B68E88F0060D053 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D7239EF2B68E88F0060D053 /* LaunchScreen.storyboard */; };
 		1D7239FE2B68E9340060D053 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7239FD2B68E9340060D053 /* Drink.swift */; };
 		1D723A022B690A840060D053 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D723A012B690A840060D053 /* RecipeViewController.swift */; };
+		1D8D9A092B70F8DB0064D7CA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1D8D9A082B70F8DB0064D7CA /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D8D9A092B70F8DB0064D7CA /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +159,9 @@
 			dependencies = (
 			);
 			name = MargaritaRecipes;
+			packageProductDependencies = (
+				1D8D9A082B70F8DB0064D7CA /* Alamofire */,
+			);
 			productName = CocktailRecipies;
 			productReference = 1D7239E12B68E88E0060D053 /* MargaritaRecipes.app */;
 			productType = "com.apple.product-type.application";
@@ -185,6 +190,9 @@
 				Base,
 			);
 			mainGroup = 1D7239D82B68E88E0060D053;
+			packageReferences = (
+				1D8D9A072B70F8DB0064D7CA /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 1D7239E22B68E88E0060D053 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -449,6 +457,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1D8D9A072B70F8DB0064D7CA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1D8D9A082B70F8DB0064D7CA /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D8D9A072B70F8DB0064D7CA /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1D7239D92B68E88E0060D053 /* Project object */;
 }

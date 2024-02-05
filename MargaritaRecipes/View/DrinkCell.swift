@@ -17,7 +17,7 @@ final class DrinkCell: UITableViewCell {
     func configure(with drink: Drink) {
             drinkName.text = drink.strDrink
             
-            networkManager.fetchImage(from: drink.strDrinkThumb!) { [unowned self] result in
+            networkManager.fetchImage(from: drink.strDrinkThumb) { [unowned self] result in
             switch result {
             case .success(let imageData):
                 drinkImage.image = UIImage(data: imageData)
