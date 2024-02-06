@@ -28,6 +28,8 @@ final class ListViewController: UITableViewController {
         guard let cell = cell as? DrinkCell else { return UITableViewCell() }
         let drink = drinks[indexPath.row]
         cell.configure(with: drink)
+        
+        
         return cell
     }
     
@@ -36,25 +38,4 @@ final class ListViewController: UITableViewController {
 // MARK: - Networking
 extension ListViewController {
 }
-/* // MARK: - Networking
- extension ListViewController {
- func fetchDrinks() {
- 
- let url = URL(string: "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")!
- 
- URLSession.shared.dataTask(with: url) {data, _, error in
- guard let data else {
- print(error?.localizedDescription ?? "No error description")
- return
- }
- 
- do {
- let drinkInfo = try JSONDecoder().decode(Drinks.self, from: data)
- print(drinkInfo)
- } catch {
- print(error)
- }
- 
- }.resume()
- }
- } */
+

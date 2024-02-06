@@ -10,21 +10,17 @@ import UIKit
 final class DrinkCell: UITableViewCell {
     
     @IBOutlet var drinkImage: UIImageView!
-    @IBOutlet var drinkName: UILabel!
+    @IBOutlet var drinkNameLabel: UILabel!
+    @IBOutlet var drinkCategoryLabel: UILabel!
+    @IBOutlet var alcoholContentLabel: UILabel!
     
     private let networkManager = NetworkManager.shared
     
     func configure(with drink: Drink) {
-            drinkName.text = drink.strDrink
-            
-            networkManager.fetchImage(from: drink.strDrinkThumb) { [unowned self] result in
-            switch result {
-            case .success(let imageData):
-                drinkImage.image = UIImage(data: imageData)
-            case .failure(let error):
-                print(error)
-            }
-        }
-     }
+        drinkNameLabel.text = drink.strDrink
+        drinkCategoryLabel.text = drink.strCategory
+        alcoholContentLabel.text = drink.strAlcoholic
+    }
+
 }
  

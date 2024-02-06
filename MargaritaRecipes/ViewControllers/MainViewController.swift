@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class MainViewController: UIViewController {
 
@@ -17,9 +18,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         margaritaButton.doGlowAnimation(withColor: UIColor.white)
+        networkManager.fetchDrinks()
     }
 }
 
-// MARK: - Networking
-extension MainViewController {
-}

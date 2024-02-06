@@ -6,7 +6,19 @@
 //
 
 import Foundation
+import Alamofire
 
+enum Link {
+    case baseURL
+    
+    var url: URL {
+        switch self {
+        case .baseURL:
+            return URL(string: "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")!
+        }
+    }
+}
+   
 enum NetworkError: Error {
     case invalidURL
     case noData
@@ -19,12 +31,24 @@ final class NetworkManager {
     
     private init() {}
     
-    
-    func fetch<T: Decodable>(_ type: T.Type, from url: URL, completion: @escaping(Result<T, NetworkError>) -> Void) {
-        
+    func fetchDrinks() {
+        AF.request(Link.baseURL.url)
+            .validate()
+            .responseJSON { dataResponse in
+                guard let statusCode = dataResponse.response?.statusCode else { return }
+                
+                print("STATUS CODE: ", statusCode)
+                
+                if (200..<300).contains(statusCode) {
+                    guard let value = dataResponse.value else { return }
+                    print("VALUE: ", value)
+                    return
+                }
+                
+                guard let error = dataResponse.error else { return }
+                print(error)
+            }
     }
     
-    func fetchImage(from url: URL, completion: @escaping(Result<Data, NetworkError>) -> Void) {
-        
-    }
+    
 }
