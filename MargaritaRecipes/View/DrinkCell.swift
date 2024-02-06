@@ -20,7 +20,15 @@ final class DrinkCell: UITableViewCell {
         drinkNameLabel.text = drink.strDrink
         drinkCategoryLabel.text = drink.strCategory
         alcoholContentLabel.text = drink.strAlcoholic
+        
+        networkManager.fetchData(from: drink.strDrinkThumb) { [unowned self] result in
+            switch result {
+            case .success(let imageData):
+                drinkImage.image = UIImage(data: imageData)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
-
 }
  

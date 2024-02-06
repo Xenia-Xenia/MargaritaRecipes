@@ -18,11 +18,12 @@ struct Drinks: Decodable {
         drinks = drinksDetails["drinks"] as? [Drink] ?? []
     }
     
-    static func getDrinks(from value: [Any]) -> [Drinks] {
+    static func getDrinks(from value: Any) -> [Drinks] {
         guard let drinksDetails = value as? [[String: [Any]]] else { return [] }
-        return drinksDetails.map { Drinks(drinksDetails: $0) }
+        return drinksDetails.map { Drinks(drinksDetails: $0)}
     }
 }
+
 struct Drink: Decodable {
     let strDrink: String
     let strCategory: String
