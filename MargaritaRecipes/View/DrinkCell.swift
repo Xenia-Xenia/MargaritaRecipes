@@ -21,14 +21,22 @@ final class DrinkCell: UITableViewCell {
         drinkCategoryLabel.text = drink.strCategory
         alcoholContentLabel.text = drink.strAlcoholic
         
-        networkManager.fetchData(from: drink.strDrinkThumb) { [unowned self] result in
+        networkManager.fetchImage(from: drink.strDrinkThumb) { [weak self] result in
             switch result {
             case .success(let imageData):
-                drinkImage.image = UIImage(data: imageData)
+                self?.drinkImage.image = UIImage(data: imageData)
             case .failure(let error):
-                print(error)
+                self?.networkManager.fetchDefaultImage(from: Link.baseURL.url) { [unowned self] result in
+                    switch result {
+                    case .success(let defaultImage):
+                        self?.drinkImage.image = UIImage(data: defaultImage)
+                    case .failure(let error):
+                        print(error)
+                    }
+                    print(error)
+                }
             }
         }
     }
+    
 }
- 

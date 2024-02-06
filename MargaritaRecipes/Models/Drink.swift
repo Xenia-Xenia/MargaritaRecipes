@@ -8,20 +8,7 @@
 import Foundation
 
 struct Drinks: Decodable {
-    let drinks: [Drink]
-    
-    init(drinks: [Drink]) {
-        self.drinks = drinks
-    }
-    
-    init(drinksDetails: [String: [Any]]) {
-        drinks = drinksDetails["drinks"] as? [Drink] ?? []
-    }
-    
-    static func getDrinks(from value: Any) -> [Drinks] {
-        guard let drinksDetails = value as? [[String: [Any]]] else { return [] }
-        return drinksDetails.map { Drinks(drinksDetails: $0)}
-    }
+    var drinks: [Drink]
 }
 
 struct Drink: Decodable {
@@ -30,25 +17,33 @@ struct Drink: Decodable {
     let strAlcoholic: String
     let strInstructions: String
     let strDrinkThumb: String
-    let strIngredient1: String
-    let strIngredient2: String
-    let strIngredient3: String
-    let strIngredient4: String
-    let strIngredient5: String
-    let strIngredient6: String
-    let strIngredient7: String
-    let strMeasure1: String
-    let strMeasure2: String
-    let strMeasure3: String
-    let strMeasure4: String
-    let strMeasure5: String
-    let strMeasure6: String
-    let strMeasure7: String
     
-    var shortDescription: String {
+    let strIngredient1: String?
+    let strIngredient2: String?
+    let strIngredient3: String?
+    let strIngredient4: String?
+    let strIngredient5: String?
+    let strIngredient6: String?
+    let strIngredient7: String?
+    
+    let strMeasure1: String?
+    let strMeasure2: String?
+    let strMeasure3: String?
+    let strMeasure4: String?
+    let strMeasure5: String?
+    let strMeasure6: String?
+    let strMeasure7: String?
+    
+    var ingredients: String {
        """
-       \(strDrink)
-       \(strAlcoholic)
+       ALL YOU NEED:
+       \(strIngredient1 ?? "") \(strMeasure1 ?? "")
+       \(strIngredient2 ?? "") \(strMeasure2 ?? "")
+       \(strIngredient3 ?? "") \(strMeasure3 ?? "")
+       \(strIngredient4 ?? "") \(strMeasure4 ?? "")
+       \(strIngredient5 ?? "") \(strMeasure5 ?? "")
+       \(strIngredient6 ?? "") \(strMeasure6 ?? "")
+       \(strIngredient7 ?? "") \(strMeasure7 ?? "")
        """
     }
     
@@ -100,19 +95,26 @@ struct Drink: Decodable {
         strAlcoholic = drinkDetails["strAlcoholic"] as? String ?? ""
         strInstructions = drinkDetails["strInstructions"] as? String ?? ""
         strDrinkThumb = drinkDetails["strDrinkThumb"] as? String ?? ""
-        strIngredient1 = drinkDetails["strIngredient1"] as? String ?? ""
-        strIngredient2 = drinkDetails["strIngredient2"] as? String ?? ""
-        strIngredient3 = drinkDetails["strIngredient3"] as? String ?? ""
-        strIngredient4 = drinkDetails["strIngredient4"] as? String ?? ""
-        strIngredient5 = drinkDetails["strIngredient5"] as? String ?? ""
-        strIngredient6 = drinkDetails["strIngredient6"] as? String ?? ""
-        strIngredient7 = drinkDetails["strIngredient7"] as? String ?? ""
-        strMeasure1 = drinkDetails["strMeasure1"] as? String ?? ""
-        strMeasure2 = drinkDetails["strMeasure2"] as? String ?? ""
-        strMeasure3 = drinkDetails["strMeasure3"] as? String ?? ""
-        strMeasure4 = drinkDetails["strMeasure4"] as? String ?? ""
-        strMeasure5 = drinkDetails["strMeasure5"] as? String ?? ""
-        strMeasure6 = drinkDetails["strMeasure6"] as? String ?? ""
-        strMeasure7 = drinkDetails["strMeasure7"] as? String ?? ""
+        strIngredient1 = drinkDetails["strIngredient1"] as? String
+        strIngredient2 = drinkDetails["strIngredient2"] as? String
+        strIngredient3 = drinkDetails["strIngredient3"] as? String
+        strIngredient4 = drinkDetails["strIngredient4"] as? String
+        strIngredient5 = drinkDetails["strIngredient5"] as? String
+        strIngredient6 = drinkDetails["strIngredient6"] as? String
+        strIngredient7 = drinkDetails["strIngredient7"] as? String
+        strMeasure1 = drinkDetails["strMeasure1"] as? String
+        strMeasure2 = drinkDetails["strMeasure2"] as? String
+        strMeasure3 = drinkDetails["strMeasure3"] as? String
+        strMeasure4 = drinkDetails["strMeasure4"] as? String
+        strMeasure5 = drinkDetails["strMeasure5"] as? String
+        strMeasure6 = drinkDetails["strMeasure6"] as? String
+        strMeasure7 = drinkDetails["strMeasure7"] as? String
+    }
+    
+    static func getDrinks(from value: Any) -> [Drink] {
+        guard let data = value as? [String: [[String: Any]]] else { return [] }
+        guard let drinksData = data["drinks"] else { return [] }
+        
+        return drinksData.map { Drink(drinkDetails: $0) }
     }
 }

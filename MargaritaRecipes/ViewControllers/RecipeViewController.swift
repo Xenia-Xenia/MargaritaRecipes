@@ -9,11 +9,11 @@ import UIKit
 
 final class RecipeViewController: UIViewController {
     
-    private let networkManager = NetworkManager.shared
-
     @IBOutlet var recipeLabel: UILabel!
     @IBOutlet var ingredientsLabel: UILabel!
     
+    private let networkManager = NetworkManager.shared
+    var drink: Drink!
     
     override func viewDidLoad() {
         super.viewDidLoad()
