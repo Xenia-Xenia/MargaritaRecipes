@@ -17,7 +17,16 @@ final class RecipeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupLabels()
+
     }
 
+    private func setupLabels() {
+        recipeLabel.text = 
+                        """
+                        Recipe:
+                        \(drink.strInstructions)
+                        """
+        ingredientsLabel.text = drink.ingredients
+    }
 }

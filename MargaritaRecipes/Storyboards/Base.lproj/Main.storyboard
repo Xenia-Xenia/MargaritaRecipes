@@ -50,9 +50,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11.25" y="-34.859154929577464"/>
+            <point key="canvasLocation" x="-15" y="-37"/>
         </scene>
-        <!--Margarita cocktail of your choice-->
+        <!--Cocktail of your dream-->
         <scene sceneID="bpW-7E-Amc">
             <objects>
                 <tableViewController modalPresentationStyle="fullScreen" id="39S-an-zIK" customClass="ListViewController" customModule="MargaritaRecipes" customModuleProvider="target" sceneMemberID="viewController">
@@ -61,10 +61,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="drinkCell" rowHeight="150" id="J5Z-IY-q0u">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="drinkCell" rowHeight="150" id="J5Z-IY-q0u" customClass="DrinkCell" customModule="MargaritaRecipes" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="320" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999996" contentMode="left" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J5Z-IY-q0u" id="29N-IT-3ns" customClass="DrinkCell" customModule="MargaritaRecipes" customModuleProvider="target">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999996" contentMode="left" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J5Z-IY-q0u" id="29N-IT-3ns">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -72,7 +72,7 @@
                                             <rect key="frame" x="10" y="0.0" width="194" height="150"/>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rgC-Ek-TdM">
-                                            <rect key="frame" x="214" y="69" width="74" height="72.5"/>
+                                            <rect key="frame" x="214" y="67.5" width="74" height="72.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zti-mN-KFW">
                                                     <rect key="frame" x="0.0" y="0.0" width="74" height="24"/>
@@ -105,15 +105,13 @@
                                         <constraint firstItem="gaq-1i-tI3" firstAttribute="leading" secondItem="29N-IT-3ns" secondAttribute="leading" constant="10" id="dO5-16-luh"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="rgC-Ek-TdM" secondAttribute="trailing" constant="16" id="ytG-ba-4qa"/>
                                     </constraints>
-                                    <connections>
-                                        <outlet property="alcoholContentLabel" destination="x9r-ed-nau" id="QIS-sd-rI0"/>
-                                        <outlet property="drinkCategoryLabel" destination="kHR-dA-JX1" id="yVZ-6n-axD"/>
-                                        <outlet property="drinkImage" destination="gaq-1i-tI3" id="wbK-Bv-3av"/>
-                                        <outlet property="drinkNameLabel" destination="zti-mN-KFW" id="TbV-RT-f4h"/>
-                                    </connections>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="CJ4-8P-yir"/>
+                                    <outlet property="alcoholContentLabel" destination="x9r-ed-nau" id="Kw5-5P-zdd"/>
+                                    <outlet property="drinkCategoryLabel" destination="kHR-dA-JX1" id="ibQ-PJ-tKT"/>
+                                    <outlet property="drinkImage" destination="gaq-1i-tI3" id="RdF-Av-0tQ"/>
+                                    <outlet property="drinkNameLabel" destination="zti-mN-KFW" id="vUR-An-VYR"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="rPd-x3-nSF"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -122,33 +120,13 @@
                             <outlet property="delegate" destination="39S-an-zIK" id="YFx-Mi-bzl"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Margarita cocktail of your choice" id="xRR-F4-K8M">
+                    <navigationItem key="navigationItem" title="Cocktail of your dream" id="xRR-F4-K8M">
                         <barButtonItem key="backBarButtonItem" title="Back to choice" id="52g-gQ-Tvy"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nvx-7N-kfh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-721.875" y="-35.91549295774648"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="uKw-Lx-EmP">
-            <objects>
-                <navigationController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="7NV-jV-B4a" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="x2k-k1-A5e"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5ki-dY-g4g">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wgK-YL-Xuy">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="39S-an-zIK" kind="relationship" relationship="rootViewController" id="dWu-4u-LGv"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="THs-1Z-1QD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1527" y="-35"/>
+            <point key="canvasLocation" x="-735" y="-35"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="eTZ-wJ-nxq">
@@ -164,7 +142,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="🍸"/>
                                 <connections>
-                                    <segue destination="7NV-jV-B4a" kind="show" id="zzf-Zs-yfB"/>
+                                    <segue destination="22P-86-san" kind="show" id="Bdq-bS-bFz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -183,10 +161,29 @@
             </objects>
             <point key="canvasLocation" x="-2317.5" y="-34.859154929577464"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3X0-h5-8Jz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="22P-86-san" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="sxe-qa-yAk"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0HJ-YI-Gzy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="39S-an-zIK" kind="relationship" relationship="rootViewController" id="zoe-Im-idG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eNL-Ns-iLt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1515" y="-36"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
